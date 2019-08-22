@@ -1,0 +1,101 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.app.ecommerceapp"
+        minSdkVersion 21
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+
+kapt {
+    generateStubs = true
+}
+
+ext {
+    daggerVersion = '2.24'
+    androidSupportVersion = '28.0.0'
+    retrofitVersion = '2.5.0'
+    gsonVersion = '2.8.5'
+    loggingInterceptorVersion = '3.12.1'
+    parcelerVersion = '1.1.12'
+    rxJavaVersion = '3.0.0-RC2'
+    rxAndroidVersion = '2.1.1'
+    smoothprogressbarVersion = '1.3.0'
+    rxKotlinVersion = '2.4.0'
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+
+    //    CONSTRAINT LAYOUT
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+
+    //    CUSTOM PROGRESSBAR
+    implementation "com.github.castorflex.smoothprogressbar:library-circular:$smoothprogressbarVersion"
+
+    //    PAYPAL
+    implementation 'com.paypal.sdk:paypal-android-sdk:2.16.0'
+
+    //    PREFERENCE SETTING
+    implementation "com.android.support:preference-v7:$androidSupportVersion"
+
+    //    RECYCLER_VIEW
+    implementation "com.android.support:recyclerview-v7:$androidSupportVersion"
+
+    //    CARDVIEW
+    implementation "com.android.support:cardview-v7:$androidSupportVersion"
+
+    //    DAGGER
+    implementation "com.google.dagger:dagger-android:$daggerVersion"
+    implementation "com.google.dagger:dagger-android-support:$daggerVersion"
+    kapt "com.google.dagger:dagger-compiler:$daggerVersion"
+    kapt "com.google.dagger:dagger-android-processor:$daggerVersion"
+
+    // if you use the support libraries
+    annotationProcessor "com.google.dagger:dagger-android-processor:$daggerVersion"
+    annotationProcessor "com.google.dagger:dagger-compiler:$daggerVersion"
+
+    //    RETROFIT
+    implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"
+
+    //    JSON PARSING
+    implementation "com.squareup.retrofit2:converter-gson:$retrofitVersion"
+    implementation "com.google.code.gson:gson:$gsonVersion"
+
+    //    HTTP LOGGING
+    implementation "com.squareup.okhttp3:logging-interceptor:$loggingInterceptorVersion"
+
+    //    RX JAVA
+    implementation "io.reactivex.rxjava3:rxjava:$rxJavaVersion"
+    implementation "io.reactivex.rxjava2:rxkotlin:$rxKotlinVersion"
+    implementation "io.reactivex.rxjava2:rxandroid:$rxAndroidVersion"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:$retrofitVersion"
+
+    //    PARCEL
+    implementation "org.parceler:parceler-api:$parcelerVersion"
+    annotationProcessor "org.parceler:parceler:$parcelerVersion"
+
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+}
