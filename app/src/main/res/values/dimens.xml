@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="margin_bottom_buttom_add_to_cart">40dp</dimen>
+    <dimen name="margin_lat_edittext_addamount">20dp</dimen>
+</resources>

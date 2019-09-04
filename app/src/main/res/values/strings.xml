@@ -4,4 +4,14 @@
     <!--DialogsHelpers-->
     <string name="ok_text">OK</string>
     <string name="cancel">Cancelar</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="enter_amount">Enter amount</string>
+    <string name="error_empty_field">Empty field, please insert a valid value</string>
+    <string name="failed_add_item">Failed to add item, please try again later</string>
+    <string name="select_brand">Please choose a Brand</string>
+    <string name="concatenate_product">%1$s %2$s</string>
+    <string name="product_of">Products of </string>
+
 </resources>

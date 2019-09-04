@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".fragments.BottomSheetAmountFragment">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+        <EditText
+                android:id="@+id/edtEnterAmount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_lat_edittext_addamount"
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:hint="@string/enter_amount"
+                android:inputType="number" />
+
+        <ImageButton
+                android:id="@+id/btnAddToCart"
+                android:layout_width="wrap_content"
+                android:layout_height="70dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/margin_bottom_buttom_add_to_cart"
+                android:src="@drawable/addtocart" />
+    </LinearLayout>
+
+</FrameLayout>
