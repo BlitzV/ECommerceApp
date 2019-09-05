@@ -88,7 +88,7 @@ class FinalizeShoppingActivity : AppCompatActivity(), FinaliceShoppingMVP.View {
 
             } else
                 DialogSimpleOkButton(this, getString(R.string.sorry), getString(R.string.something_went_wrong),
-                    DialogInterface.OnClickListener{dialog, which ->
+                    DialogInterface.OnClickListener{dialog, _ ->
                         dialog.cancel()
                     }).show()
         }

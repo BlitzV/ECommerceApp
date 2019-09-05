@@ -51,7 +51,7 @@ class HomeActivity : AppCompatActivity(), HomeMVP.View {
 
         requestQ.add(jsonAr)
 
-        brandListView.setOnItemClickListener { adapterView, view, i, l ->
+        brandListView.setOnItemClickListener { _, _, i, _ ->
 
 
             val tappedBrand = brandsList[i]

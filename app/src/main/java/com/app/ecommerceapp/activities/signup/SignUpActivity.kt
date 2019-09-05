@@ -62,7 +62,7 @@ class SignUpActivity : AppCompatActivity(), SignUpMVP.View {
                 requestQ.add(stringRequest)
             } else {
 
-                DialogSimpleOkButton(this, getString(R.string.message),getString(R.string.password_mismatch),DialogInterface.OnClickListener { dialog, which ->
+                DialogSimpleOkButton(this, getString(R.string.message),getString(R.string.password_mismatch),DialogInterface.OnClickListener { dialog, _ ->
                     dialog.cancel()
                 }).show()
             }
