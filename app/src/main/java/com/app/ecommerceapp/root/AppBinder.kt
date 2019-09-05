@@ -6,6 +6,8 @@ import com.app.ecommerceapp.activities.home.HomeActivity
 import com.app.ecommerceapp.activities.home.HomeModule
 import com.app.ecommerceapp.activities.login.LoginActivity
 import com.app.ecommerceapp.activities.login.LoginModule
+import com.app.ecommerceapp.activities.products.FetchEProductsActivity
+import com.app.ecommerceapp.activities.products.FetchEProductsModule
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
 
@@ -20,4 +22,7 @@ abstract class AppBinder {
 
     @ContributesAndroidInjector(modules = [CartProductModule::class])
     internal abstract fun contributeCartActivity(): CartProductsActivity
+
+    @ContributesAndroidInjector(modules = [FetchEProductsModule::class])
+    internal abstract fun contributeFetchEProducts(): FetchEProductsActivity
 }
