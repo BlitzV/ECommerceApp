@@ -14,6 +14,13 @@ class Constants {
         val LATERST_INVOICE = "LATEST_INVOICE_NUMBER"
         val CALCULATE_TOTAL_PRICE_URL = "http://192.168.1.124//OnlineStoreApp/calculate_total_price.php?invoice_num="
         val BRANDS_URL = "http://192.168.1.124/OnlineStoreApp/fetch_brands.php"
+
+        val LOGIN_URL = "http://192.168.1.124/OnlineStoreApp/login_app_user.php?email="
+        val LOGIN_URL_PASS = "&pass="
+
+        val SIGN_UP_URL = "http://192.168.1.124/OnlineStoreApp/join_new_user.php?email="
+        val SIGN_UP_URL_USERNAME = "&username="
+        val SIGN_UP_URL_PASS = "&pass="
     }
 
 }

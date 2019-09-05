@@ -26,5 +26,10 @@
     <string name="sign_up">Registrarse</string>
     <string name="request_email">Por favor ingrese su correo electronico</string>
     <string name="request_password">Ingrese su contrasena</string>
+    <string name="request_username">Por favor introduzca su nombre de usuario</string>
+    <string name="request_confirm_password">Ingrese nuevamente su contrasena</string>
+    <string name="message">Informacion</string>
+    <string name="password_mismatch">Las contrasenas con concuerdan</string>
+    <string name="thanks">Gracias por su compra</string>
 
 </resources>

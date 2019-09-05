@@ -4,6 +4,102 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@android:color/holo_blue_light"
         tools:context=".activities.signup.SignUpActivity">
+
+    <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="fitXY"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginBottom="30dp"
+            app:srcCompat="@drawable/signup" />
+
+    <EditText
+            android:id="@+id/sign_up_layout_edtEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableEnd="@drawable/email"
+            android:hint="@string/request_email"
+            android:inputType="textEmailAddress"
+            android:layout_margin="12dp"
+            android:textSize="16sp"
+            android:textColor="#000"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <EditText
+            android:id="@+id/sign_up_layout_edtUsername"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableEnd="@drawable/username"
+            android:hint="@string/request_username"
+            android:textSize="16sp"
+            android:layout_margin="12dp"
+            android:inputType="text"
+            android:textColor="#000"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sign_up_layout_edtEmail" />
+
+    <EditText
+            android:id="@+id/sign_up_layout_edtPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableEnd="@drawable/password"
+            android:hint="@string/request_password"
+            android:inputType="textPassword"
+            android:textSize="16sp"
+            android:layout_margin="12dp"
+            android:textColor="#000"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sign_up_layout_edtUsername" />
+
+    <EditText
+            android:id="@+id/sign_up_layout_edtConfirmPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableEnd="@drawable/confirm"
+            android:layout_margin="12dp"
+            android:textSize="16sp"
+            android:hint="@string/request_confirm_password"
+            android:inputType="textPassword"
+            android:textColor="#000"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sign_up_layout_edtPassword" />
+
+    <Button
+            android:id="@+id/sign_up_layout_btnSignUp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/holo_orange_dark"
+            android:layout_margin="25dp"
+            android:text="@string/sign_up"
+            android:textColor="#000"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sign_up_layout_edtConfirmPassword" />
+
+    <Button
+            android:id="@+id/sign_up_layout_btnLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/holo_orange_dark"
+            android:layout_margin="25dp"
+            android:text="@string/login"
+            android:textColor="#000"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sign_up_layout_btnSignUp" />
 
 </android.support.constraint.ConstraintLayout>
