@@ -12,7 +12,10 @@
             android:supportsRtl="true"
             android:theme="@style/AppTheme"
             tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".activities.products.FetchEProductsActivity"></activity>
+        <activity android:name=".activities.signup.SignUpActivity"></activity>
+        <activity android:name=".activities.ThankYouScreen" />
+        <activity android:name=".activities.finalizeshop.FinalizeShoppingActivity" />
+        <activity android:name=".activities.products.FetchEProductsActivity" />
         <activity android:name=".activities.home.HomeActivity" />
         <activity android:name=".activities.cart.CartProductsActivity" />
         <activity android:name=".activities.login.LoginActivity">

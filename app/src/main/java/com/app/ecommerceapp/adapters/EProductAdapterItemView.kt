@@ -24,7 +24,7 @@ class EProductAdapterItemView(val context: Context, var items:ArrayList<EProduct
 
     override fun onBindViewHolder(holder: CustomViewHolder, position: Int) {
 
-        (holder as CustomViewHolder)
+        (holder as CustomViewHolder).initializeRowUIComponents(items[position].id, items[position].name, items[position].price, items[position].pictureName)
     }
 
     interface OnEventAction{

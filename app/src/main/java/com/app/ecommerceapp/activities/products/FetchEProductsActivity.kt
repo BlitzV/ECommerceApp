@@ -16,6 +16,7 @@ import com.app.ecommerceapp.helpers.Constants.Companion.BRAND_SELECTED
 import com.app.ecommerceapp.helpers.Constants.Companion.PRODUCT_URL
 import com.app.ecommerceapp.helpers.DialogsHelper.Companion.DialogSimpleOkButton
 import com.app.ecommerceapp.models.EProduct
+import dagger.android.AndroidInjection
 import kotlinx.android.synthetic.main.activity_fetch_eproducts.*
 import java.util.*
 import javax.inject.Inject
@@ -29,6 +30,7 @@ class FetchEProductsActivity : AppCompatActivity(), FetchEProductsMVP.View, EPro
     var productList = ArrayList<EProduct>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        AndroidInjection.inject(this)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_fetch_eproducts)
 

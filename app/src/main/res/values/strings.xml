@@ -14,5 +14,17 @@
     <string name="concatenate_product">%1$s %2$s</string>
     <string name="product_of">Products of </string>
     <string name="failed_get_data">Error al obtener la data</string>
+    <string name="continue_shop">Seguir comprando</string>
+    <string name="verify">Verificar</string>
+    <string name="decline">Cancelar</string>
+    <string name="pay_paypal">Pagar %1$s con PayPal ahora!</string>
+    <string name="currency_usd">USD</string>
+    <string name="kotlin_store">Tienda online en Kotlin</string>
+    <string name="sorry">Lo sentimos!</string>
+    <string name="something_went_wrong">Algo salio mal, intente nuevamente</string>
+    <string name="login">Ingresar</string>
+    <string name="sign_up">Registrarse</string>
+    <string name="request_email">Por favor ingrese su correo electronico</string>
+    <string name="request_password">Ingrese su contrasena</string>
 
 </resources>
