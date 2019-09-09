@@ -1,5 +1,6 @@
 package com.app.ecommerceapp.activities.login
 
+import android.app.AlertDialog
 import android.content.Context
 import android.content.DialogInterface
 import android.content.Intent
@@ -26,6 +27,9 @@ class LoginActivity : AppCompatActivity(), LoginMVP.View {
     @Inject
     lateinit var presenter: LoginMVP.Presenter
 
+    var dialog: AlertDialog? = null
+    var dialogError: AlertDialog? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         AndroidInjection.inject(this)
         super.onCreate(savedInstanceState)
@@ -44,15 +48,17 @@ class LoginActivity : AppCompatActivity(), LoginMVP.View {
                     val homeIntent = Intent(this, HomeActivity::class.java)
                     startActivity(homeIntent)
                 } else {
-                    DialogSimpleOkButton(this, getString(R.string.failed_get_data),response, DialogInterface.OnClickListener { dialog, _ ->
+                    dialog = DialogSimpleOkButton(this, getString(R.string.failed_get_data),response, DialogInterface.OnClickListener { dialog, _ ->
                         dialog.cancel()
-                    }).show()
+                    })
+                    dialog?.show()
                 }
 
             }, Response.ErrorListener { error ->
-                DialogSimpleOkButton(this, getString(R.string.failed_get_data),error.localizedMessage, DialogInterface.OnClickListener { dialog, _ ->
+                dialogError = DialogSimpleOkButton(this, getString(R.string.failed_get_data),error.message.toString(), DialogInterface.OnClickListener { dialog, _ ->
                     dialog.cancel()
-                }).show()
+                })
+                dialogError?.show()
             })
 
             requestQ.add(stringRequest)
@@ -69,6 +75,16 @@ class LoginActivity : AppCompatActivity(), LoginMVP.View {
     override fun onResume() {
         super.onResume()
         presenter.setView(this)
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        if(dialog!=null){
+            dialog?.dismiss()
+        }
+        if(dialogError!=null){
+            dialogError?.dismiss()
+        }
     }
 
     override fun fetchContext(): Context {

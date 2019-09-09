@@ -5,6 +5,7 @@ import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import com.app.ecommerceapp.R
 import com.app.ecommerceapp.helpers.Constants
 import com.app.ecommerceapp.models.EProduct
@@ -31,11 +32,11 @@ class EProductAdapterItemView(val context: Context, var items:ArrayList<EProduct
     }
 
     inner class CustomViewHolder(view: View): RecyclerView.ViewHolder(view){
-        val imageItem = view.image_itemList
-        val textItemName = view.text_itemList_name
-        val textItemId = view.text_itemList_id
-        val textItemPrice = view.text_itemList_price
-        val imageADD = view.imgAdd
+        private val imageItem = view.image_itemList
+        private val textItemName = view.text_itemList_name
+        private val textItemId = view.text_itemList_id
+        private val textItemPrice = view.text_itemList_price
+        private val imageADD = view.imgAdd
 
         fun initializeRowUIComponents(id: Int, name: String, price: Int, picName: String){
             textItemName.text = name
